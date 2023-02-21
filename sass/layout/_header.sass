@@ -1,0 +1,103 @@
+.header
+    position: sticky
+    top: 0
+    left: 0
+    right: 0
+    background: $white
+    box-shadow: $box-shadow
+    padding: 2rem 10%
+    display: flex
+    aligin-items: center
+    z-index: 1000
+
+    .logo
+        margin-right: auto
+        @include titleText(2.5rem)
+        font-weight: bolder
+
+        i
+            color: $green
+
+    .navbar 
+        position: relative
+
+        #close-navbar
+            position: absolute
+            top: 1.5rem
+            right: 2rem
+            font-size: 4rem
+            cursor: pointer
+            color: $black
+            display: none
+
+            &:hover
+                transform: rotate(90deg)
+        a 
+            margin-right: 2rem
+            @include titleText(2rem)
+
+            &:hover
+                color: $green
+
+    .icons div
+        cursor: pointer
+        font-size: 2.5rem
+        margin-left: 1.5rem
+        color: $black
+
+        &:hover
+            color: $green
+
+    #menu-btn
+        display: none
+
+@media ( max-width: 1200px )
+    .header
+        padding: 2rem 5%
+
+@media ( max-width: 991px )
+
+    .header
+        padding: 2rem
+
+@media ( max-width: 768px )
+    .header
+        #menu-btn
+            display: inline-block
+
+        .navbar
+            position: fixed
+            top: 0
+            right: -105%
+            widht: 30rem
+            background: $white
+            height: 100%
+            display: flex
+            flex-flow: column
+            justify-content: center
+            z-index: 1200
+
+            #close-navbar
+                display: block
+
+            &.active
+                box-shadow: 0 0 0 100vh rgba(0, 0, 0, .8) 
+                right: 0
+
+
+            a
+                display: block
+                margin: 1rem 0
+                text-align: center
+                font-size: 3rem
+
+    .home .slide .content h3
+        font-size: 3rem
+
+@media ( max-width: 450px )
+
+    .heading
+        font-size: 3rem
+
+
+

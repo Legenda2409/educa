@@ -1,0 +1,81 @@
+.acount-form
+    position: fixed
+    top: 0
+    right: -105%
+    widht: 35rem
+    background: $white
+    display: flex
+    flex-flow: column
+    gap: 2rem
+    justify-content: center
+    height: 100%
+    z-index: 1200
+    padding: 2rem
+    text-align: center
+
+    &.active
+        right: 0
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8)
+
+    #close-form
+        position: absolute
+        top: 1.5rem
+        right: 2.5rem
+        font-size: 4rem
+        cursor: pointer
+        color: $black
+
+        &:hover
+            transform: rotate(90deg)
+
+    form
+        border: $border
+        padding: 2rem
+        display: none
+
+        &.active
+            display: block
+
+
+        h3
+            @include titleText(2.5rem)
+            padding-bottom: .5rem
+            text-transform: uppercase
+
+        .box
+            display: block
+            widht: 100%
+            padding: 1.2rem 1.4rem
+            border: $border
+            font-size: 1.6rem
+            margin: .7rem 0
+
+        .flex
+            padding: 1rem 0
+            display: flex
+            align-items: center
+            gap: .5rem
+
+            label
+                font-size: 1.5rem
+                color: $light-color
+                cursor: pointer
+
+            a
+                font-size: 1.5rem
+                color: $light-color
+                margin-left: auto
+
+                &:hover
+                    text-decoration: underline
+                    color: $green
+        
+        .btn
+            width: 100%
+
+    .buttons .btn
+        margin: 0 .5rem
+
+        &.active
+            background: $green
+            color: $white

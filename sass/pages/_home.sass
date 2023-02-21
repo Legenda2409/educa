@@ -1,0 +1,97 @@
+.home
+    padding: 0
+
+    .slide
+        display: flex
+        align-items: center
+        height: 60rem
+        background-size: cover !important
+        background-position: center !important
+
+        .content
+            width: 50rem
+            h3
+                @include titleText(5.5rem)
+                color: $white
+
+            p
+                @include graphText(1.6rem)
+                color: $light-white
+                padding: 1rem 0
+
+.swiper-pagination-bullet-active
+    background: $green
+
+.subjects
+    .box-container
+        @include grid(16rem)
+
+        .box
+            padding: 3rem 2rem
+            text-align: center
+            border: $border
+            background: $light-grenn
+            cursor: pointer
+
+            &:hover
+                background: $green
+
+                h3
+                    color: $white
+
+                p
+                    color: $light-white
+
+            img
+                height: 10rem
+                margin-bottom: .7rem
+
+            h3
+                @include titleText(1.7rem)
+                padding: .5rem 0
+
+            p
+                @include graphText(1.5rem)
+
+.home-courses
+
+    .slide
+        text-align: center
+        position: relative
+        background: $light-grenn
+        overflow: hidden
+
+        &:hover .content
+            bottom: 0
+            
+
+        .image
+            padding: 2rem
+            overflow: hidden
+
+            img
+                width: 100%
+                margin-bottom: 1.5rem
+
+            h3
+                @include titleText(2rem)
+
+    .content
+        position: absolute
+        bottom: -100%
+        right: 0
+        left: 0
+        background: $green
+        padding: 2rem 3rem
+
+        h3
+            @include titleText(2rem)
+            color: $white
+
+        p
+            padding: 1rem 0
+            @include graphText(1.5rem)
+            color: $light-white
+
+        .btn:hover
+            background: $black
